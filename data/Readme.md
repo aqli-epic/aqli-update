@@ -38,11 +38,7 @@ We also provide two different flavors of **table presentations —wide and narro
 | 1 | AFG | Afghanistan | 37461801 | 35 | ... | ... | ... |
 | ... | ... | ... | ... | ... | ... | ... | ... |
 
-> ⚠️ **Warning**: <br> Description text here
-
-<table>
-  <td>⚠️ <b>Warning:</b> <br/>The **narrow (a.k.a. long) formats** might be too long for *Google Spreadsheet* and *Excel*. You may lose rows if you use them to open or process these files.<br/>The **gadm2 wide table** is also beyond *Google Spreadsheet's* 10- million cell limit.</td>
-</table>
+> **Warning**: <br> The **narrow (a.k.a. long) formats** might be too long for *Google Spreadsheet* and *Excel*. You may lose rows if you use them to open or process these files.<br>The **gadm2 wide table** is also beyond *Google Spreadsheet's* 10- million cell limit.
 
 You can tweak these outputs, in this [ObservableHQ notebook](https://observablehq.com/@fndvit/wide-and-narrow-formats-off-the-csvs).
 
