@@ -1,6 +1,6 @@
 # Data description
 The Air Quality Life Index provides **three different types of data** about air pollution, by year, at different geographic levels:
-* The most important type (prefixed `who` in our data) converts air pollution concentrations (annual PM<sub>2.5</sub>) into tangible terms—its impact on life expectancy. It's the years of life expectancy that communities could gain if they reduce air pollution to the **World Health Organization (WHO)'s guideline** of 5 µg/m<sup>3</sup>.
+* The most important type (prefixed `who` in our data) converts air pollution concentrations (annual PM<sub>2.5</sub> in µg/m<sup>3</sup>) into tangible terms —its impact on life expectancy. It's the years of life expectancy that communities could gain if they reduce air pollution to the **World Health Organization (WHO)'s guideline** of 5 µg/m<sup>3</sup>.
 * Similarly, when countries have a **national standard** —most often significantly higher than the WHO guideline— we translate the annual PM<sub>2.5</sub> levels to years of life expectancy gained if that national standard (prefixed `nat`) were met.
 * And finally, the **PM<sub>2.5</sub> levels** themselves (prefixed `pm`), which are the basis of all our calculations.
 
