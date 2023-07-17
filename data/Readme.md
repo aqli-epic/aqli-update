@@ -14,7 +14,7 @@ We provide `CSVs` and `JSONs` in **three different administrative levels**:
 
 ---
 
-We also provide two different flavors of **table presentations —wide and narrow**, since different data libraries, utils, and software requiere different table formats. (And we know not everyone enjoys pivoting their tables.)
+We also provide two different flavors of **table presentations —wide and narrow**, since different data libraries, utilities, and software requiere different table formats. (And we know not everyone enjoys pivoting their tables.)
 
 * The wide format looks something like: 
 
@@ -73,16 +73,14 @@ For the data in **narrow format**, `type`, `year` and `value` represent what the
 
 ---
 ## Sources
-This is a summary of the data sources for the Air Quality Life Index. 
+This is a summary of the data sources for the Air Quality Life Index. For a more in-depth dive, read the [AQLI methodology and research design](https://aqli.epic.uchicago.edu/about/methodology/). 
+
 * The data for the annual average concentrations of PM<sub>2.5</sub> comes from a satellite-derived particulate pollution (PM<sub>2.5</sub>) concentration dataset constructed by [Donkelaar et al. (2021)](https://sites.wustl.edu/acag/datasets/surface-pm2-5/).
 * The population data comes from https://landscan.ornl.gov/.
 * The potential gain in life expectancy is calculated based on a formula by [Ebenstein et al (2017)](https://www.pnas.org/doi/full/10.1073/pnas.1616784114) as explained in the methodology.
 
-For a more in-depth dive, read the [AQLI methodology and research design](https://aqli.epic.uchicago.edu/about/methodology/). 
-
 ---
 ## Issues and limitations
-* TK TK
 * TK TK
 * TK TK
 * TK TK
