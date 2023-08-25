@@ -31,5 +31,5 @@ For media references, use 'Air Quality Life Index (AQLI) by the Energy Policy In
 ---
 ## Contact us
 
-TK TK 
+aqli-info@uchicago.edu 
 
