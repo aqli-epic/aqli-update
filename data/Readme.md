@@ -72,6 +72,13 @@ For the data in **narrow format**, `type`, `year` and `value` represent what the
 | value | Measurement value | `pm` PM<sub>2.5</sub> in µg/m<sup>3</sup> <br/>`who` Years <br/>`nat` Years |
 
 ---
+
+## GADM Shapefiles
+The underlying shapefiles for the gadm datasets can be found [here](https://uchicago.box.com/s/w0q0kmxhc1k2q5yuqexqgbd6ssjarg76). Refer point 3 of the issues and limitations section that 
+talks more about this.
+
+---
+
 ## Sources
 This is a summary of the data sources for the Air Quality Life Index. For a more in-depth dive, read the [AQLI methodology and research design](https://aqli.epic.uchicago.edu/about/methodology/). 
 
