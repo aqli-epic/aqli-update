@@ -74,7 +74,7 @@ For the data in **narrow format**, `type`, `year` and `value` represent what the
 ---
 
 ## GADM Shapefiles
-The underlying shapefiles for the gadm datasets can be found [here](https://uchicago.box.com/s/w0q0kmxhc1k2q5yuqexqgbd6ssjarg76). Refer point 3 of the issues and limitations section that 
+The underlying shapefiles for these gadm datasets can be found [here](https://uchicago.box.com/s/w0q0kmxhc1k2q5yuqexqgbd6ssjarg76). Refer point 3 of the **Issues and limitations** section that 
 talks more about this.
 
 ---
@@ -84,6 +84,7 @@ This is a summary of the data sources for the Air Quality Life Index. For a more
 
 * The data for the annual average concentrations of PM<sub>2.5</sub> comes from a satellite-derived particulate pollution (PM<sub>2.5</sub>) concentration dataset constructed by [Donkelaar et al. (2021)](https://sites.wustl.edu/acag/datasets/surface-pm2-5/).
 * The population data comes from https://landscan.ornl.gov/.
+* The shapefiles are sourced from [GADM](https://gadm.org/download_world.html). Refer point 3 of the **Issues and limitations** section that talks more about this.
 * The potential gain in life expectancy is calculated based on a formula by [Ebenstein et al (2017)](https://www.pnas.org/doi/full/10.1073/pnas.1616784114) as explained in the methodology.
 
 ---
