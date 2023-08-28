@@ -81,6 +81,20 @@ This is a summary of the data sources for the Air Quality Life Index. For a more
 
 ---
 ## Issues and limitations
-* TK TK
-* TK TK
-* TK TK
+* Certain countries lack gadm level 2 (district/county/prefecture) region names, resulting in maximum available pollution data being at gadm level 1. Some countries lack both gadm level 1 and gadm level 2 names, reducing available data to gadm level 0 (country). Future data sources could fill in missing region names.
+
+* PM2.5 data for regions above ~ 67.995 degree N, or anything below ~ 54.995 degree S is not available due to inherent limitations in the underlying satellite data retrieval.
+
+* Currently, overlapping region boundaries occur as a result of rendering gadm shapefiles on the mapbox platform. To address this issue, we are aiming to enhance alignment and eliminate overlaps by incorporating mapbox boundaries product in our future versions of our platform.
+
+* The pollution time series is fully recalculated (by the [Atmospheric Composition Analysis Group](https://sites.wustl.edu/acag/datasets/surface-pm2-5/)) due to improved modeling methods and expanded ground-level monitoring, which enhances the accuracy of satellite-derived PM2.5 data calibration. Consequently, pollution values for a specific region in a given year, such as 1998 (or any given year), might exhibit slight differences between the latest and previous datasets. Read more about this in the Methodology section of the website.
+
+* The PM2.5 averages presented on the AQLI platform are averaged annually and hence variation in pollution within the year cannot be determined from the AQLI datasets.
+
+* AQLI utilizes satellite-derived PM2.5 data with a resolution of 0.01 degree longitude x 0.01 degree latitude (~1 km x 1 km), which is summarized and displayed at gadm levels 0, 1, and 2 (country, state, and district). However, the platform currently lacks the capability to present data at the finer 1x1 km resolution. There are plans to potentially integrate this higher resolution functionality into the platform in the future.
+
+* AQLI data purposely concentrates on a specific subset of satellite derived PM2.5 pollution - one that excludes mineral dust and sea salt. This data mainly represents pollution from human activities like vehicles, power plants, and industries, rather than natural sources. This approach aligns with the particulate pollution studied in Ebenstein et al. (2017), focusing on variations attributed to coal combustion differences. This targeted subset is more amenable to policy intervention, since it is human-generated. Additional details are available in the Methodology section of our website.
+
+* In cases where tiny regions are located near or within water bodies, both population and/or pollution data might be unavailable due to limitations in data sources or challenges in deriving such information within our current data processing system. We plan to address these issues in future versions of the map.   
+ 
+ 
