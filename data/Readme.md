@@ -28,7 +28,7 @@ We also provide two different flavors of **table presentations —wide and narro
 * While the narrow or long format looks something like:
 
 | id | name | population | natstandard | year | type | value |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- |
 | AFG | Afghanistan | 37461801 | 35 | 1998 | pm | 10.88 |
 | AFG | Afghanistan | 37461801 | 35 | 1999 | pm | 10.7 |
 | AFG | Afghanistan | 37461801 | 35 | 2000 | pm | 11.88 |
