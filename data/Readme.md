@@ -18,24 +18,24 @@ We also provide two different flavors of **table presentations —wide and narro
 
 * The wide format looks something like: 
 
-| objectid_gadm0 | iso_alpha3 | name0 | population | natstandard | pm1998 | pm1999 | pm2000 | pm2001 | pm2002 | ... | nat1998 | nat1999 | nat2000 | nat2001 | nat2002 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | AFG | Afghanistan | 37461801 | 35 | 10.88 | 10.7 | 11.88 | 13.89 | 13.58 | ... | 0 | 0 | 0 | 0 | 0 |
-| 2 | XAD | Akrotiri and Dhekelia | 24378 | NA | 11.74 | 11.67 | 13.73 | 12.67 | 10.96 | ... | NA | NA | NA | NA | NA |
-| 3 | ALB | Albania | 3082234 | 25 | 16.86 | 15.43 | 17.33 | 16.42 | 18.07 | ... | 0 | 0 | 0 | 0 | 0 |
+| id | name | population | natstandard | pm1998 | pm1999 | pm2000 | pm2001 | pm2002 | ... | nat1998 | nat1999 | nat2000 | nat2001 | nat2002 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| AFG | Afghanistan | 37461801 | 35 | 10.88 | 10.7 | 11.88 | 13.89 | 13.58 | ... | 0 | 0 | 0 | 0 | 0 |
+| XAD | Akrotiri and Dhekelia | 24378 | NA | 11.74 | 11.67 | 13.73 | 12.67 | 10.96 | ... | NA | NA | NA | NA | NA |
+| ALB | Albania | 3082234 | 25 | 16.86 | 15.43 | 17.33 | 16.42 | 18.07 | ... | 0 | 0 | 0 | 0 | 0 |
 | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |
 
 * While the narrow or long format looks something like:
 
-| objectid_gadm0 | iso_alpha3 | name0 | population | natstandard | year | type | value |
+| id | name | population | natstandard | year | type | value |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | AFG | Afghanistan | 37461801 | 35 | 1998 | pm | 10.88 |
-| 1 | AFG | Afghanistan | 37461801 | 35 | 1999 | pm | 10.7 |
-| 1 | AFG | Afghanistan | 37461801 | 35 | 2000 | pm | 11.88 |
-| 1 | AFG | Afghanistan | 37461801 | 35 | 1998 | who | 0.58 |
-| 1 | AFG | Afghanistan | 37461801 | 35 | ... | ... | ... |
-| 1 | AFG | Afghanistan | 37461801 | 35 | 1998 | nat | 0.56 |
-| 1 | AFG | Afghanistan | 37461801 | 35 | ... | ... | ... |
+| AFG | Afghanistan | 37461801 | 35 | 1998 | pm | 10.88 |
+| AFG | Afghanistan | 37461801 | 35 | 1999 | pm | 10.7 |
+| AFG | Afghanistan | 37461801 | 35 | 2000 | pm | 11.88 |
+| AFG | Afghanistan | 37461801 | 35 | 1998 | who | 0.58 |
+| AFG | Afghanistan | 37461801 | 35 | ... | ... | ... |
+| AFG | Afghanistan | 37461801 | 35 | 1998 | nat | 0.56 |
+| AFG | Afghanistan | 37461801 | 35 | ... | ... | ... |
 | ... | ... | ... | ... | ... | ... | ... | ... |
 
 > **Warning**: <br> The **narrow (a.k.a. long) formats** might be too long for *Google Spreadsheet* and *Excel*. You may lose rows if you use them to open or process these files.<br>The **gadm2 wide table** is also beyond *Google Spreadsheet's* 10- million cell limit.
@@ -48,9 +48,8 @@ Below is the codebook for the Air Quality Life Index defining what each variable
 
 | Column Name | Description | Format / Units |
 | --- | --- | --- |
-| **objectid_gadm{0,1,2}** | Unique identifier for the administrative area | Unique integers |
-| **iso_alpha3** | Three-letter country codes defined in ISO 3166-1 | Alphabetic |
-| **name{0,1,2}** | `name0` Country<br/>`name1` Second level<br/>  and `name1` Third level admin name | Text |
+| **id{0,1,2}** | Unique identifier for the administrative area | Unique integers for GADM1 and 2, Alphabetic for GADM0 |
+| **name{0,1,2}** | `name0` Country<br/>`name1` Second level<br/>  and `name` Feature name | Text |
 | **population** | Total population of the administrative feature | People |
 | **natstandard** | National standards for annual concentrations of PM<sub>2.5</sub>, in most cases, significantly higher than the WHO guideline | PM<sub>2.5</sub> in µg/m<sup>3</sup> |
 
