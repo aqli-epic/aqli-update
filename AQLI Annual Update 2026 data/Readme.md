@@ -6,7 +6,7 @@ The Air Quality Life Index provides **three different types of data** about air 
 
 ---
 
-We provide `CSVs` and `JSONs` in **three different administrative levels**:
+We provide `CSVs` in **three different administrative levels**:
 
 * `gadm0` is the highest level of administrative division in the [Global Administrative Areas database](https://gadm.org/), generally representing the country level.
 * `gadm1` is the second level of administrative division, representing subdivisions within a country such as states, provinces, or regions. 
