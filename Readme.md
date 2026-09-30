@@ -2,11 +2,49 @@
 
 ![AQLI Data Explorer](aqli.png)
 
-The **Air Quality Life Index (AQLI)**, developed by the **Energy Policy Institute at the University of Chicago (EPIC)**, translates long-term exposure to fine particulate matter (PM<sub>2.5</sub>) into its effect on life expectancy. Unlike conventional air-quality indicators that report concentrations alone, the AQLI expresses the consequences of sustained particulate pollution as the **potential gain in life expectancy if pollution were permanently reduced to a specified benchmark**.
+The **Air Quality Life Index (AQLI)**, developed by the **Energy Policy Institute at the University of Chicago (EPIC)**, translates long-term exposure to fine particulate matter (PM<sub>2.5</sub>) into its effect on life expectancy.
 
-The AQLI combines peer-reviewed causal evidence on sustained particulate exposure and mortality with global satellite-derived PM<sub>2.5</sub> estimates and population data. Results can be evaluated relative to the **World Health Organization annual PM<sub>2.5</sub> guideline of 5 µg/m³**, a country-specific national standard, or another selected benchmark.
+AQLI combines peer-reviewed evidence on sustained particulate exposure and mortality with satellite-derived PM<sub>2.5</sub> estimates and population data. Results can be evaluated relative to the **World Health Organization annual PM<sub>2.5</sub> guideline of 5 µg/m³**, a country-specific national standard, or another selected benchmark.
 
 > **Important:** AQLI estimates describe the long-term consequences of annual PM<sub>2.5</sub> exposure. They are not real-time AQI readings, short-term exposure forecasts, or substitutes for regulatory ground-monitoring networks.
+
+---
+
+## Data releases
+
+| Release | Status | Contents |
+|---|---|---|
+| [`AQLI Annual Update 2025 data/`](./AQLI%20Annual%20Update%202025%20data/) | **Latest completed release** | GADM0, GADM1, and GADM2 data archives and release documentation |
+| [`AQLI Annual Update 2026 data/`](./AQLI%20Annual%20Update%202026%20data/) | **Work in progress** | Data under active development for the next annual update |
+| [`archive/`](./archive/) | Historical | Earlier archived data |
+
+> **2026 data are under active development and should not be treated as a finalized AQLI release until publication is complete.**
+
+Each annual-release directory contains its own README with release-specific field definitions, units, source information, and limitations.
+
+---
+
+## Geographic levels
+
+AQLI data are distributed at multiple administrative levels based on GADM boundaries:
+
+- **GADM0** — country level
+- **GADM1** — first administrative level, such as states, provinces, or regions
+- **GADM2** — second administrative level, such as districts, counties, or municipalities
+
+Availability can vary by country depending on the underlying geographic data.
+
+---
+
+## Core measures
+
+The release files contain three principal AQLI measures:
+
+- **`pm`** — annual average PM<sub>2.5</sub> concentration, reported in µg/m³
+- **`who`** — potential gain in life expectancy if PM<sub>2.5</sub> were permanently reduced to the WHO annual guideline
+- **`nat`** — potential gain in life expectancy if PM<sub>2.5</sub> were permanently reduced to the applicable national standard
+
+See the README inside each annual-release directory for the complete codebook and release-specific year coverage.
 
 ---
 
@@ -14,67 +52,34 @@ The AQLI combines peer-reviewed causal evidence on sustained particulate exposur
 
 ![AQLI dashboard showing country trends and subnational PM2.5 patterns](aqli_dashboard.png)
 
-The interactive dashboard provides a research and policy interface for examining the geographic distribution, historical evolution, and potential health consequences of PM<sub>2.5</sub> exposure.
+The AQLI dashboard provides an interface for exploring the geographic distribution, historical evolution, and potential health consequences of PM<sub>2.5</sub> exposure.
 
-### Core capabilities
+It supports:
 
-- **Country and year selection:** Examine annual results for a selected country and data year.
-- **Long-term trend analysis:** Track national PM<sub>2.5</sub> concentrations over time and compare them with the applicable national standard.
-- **Subnational exploration:** View estimates at state/province and district/county levels where those geographies are available.
-- **Spatial comparison:** Use the map to identify within-country differences that may be hidden by national averages.
-- **Health-impact interpretation:** Switch between PM<sub>2.5</sub> concentration and the potential gain in life expectancy associated with permanently meeting a selected air-quality benchmark.
-- **Context-rich tooltips:** Review population, pollution concentration, and geographic information for individual administrative units.
+- country and year selection;
+- long-term PM<sub>2.5</sub> trend analysis;
+- state/province and district/county exploration where available;
+- comparison with WHO and national standards;
+- spatial analysis of within-country differences; and
+- interpretation of potential gains in life expectancy.
 
-### How the dashboard supports analysis
-
-| Research or policy question | Dashboard contribution |
-|---|---|
-| How has pollution changed over time? | The annual time series identifies persistent trends, reversals, and unusually high or low years. |
-| Which areas experience the greatest exposure? | The subnational map highlights spatial heterogeneity and pollution hotspots. |
-| Are national averages masking local disparities? | State and district views reveal variation within a country. |
-| How far is a location from an air-quality benchmark? | Reference standards provide a consistent basis for evaluating the concentration gap. |
-| What is the potential health benefit of cleaner air? | The life-expectancy view converts sustained PM<sub>2.5</sub> reductions into an interpretable health metric. |
-| Where might additional research or policy attention be useful? | Trend, exposure, and population information can be assessed together to support prioritization and further investigation. |
-
-The dashboard supports **research, policy analysis, journalism, teaching, and public communication**. It helps users move from a concentration-only interpretation of air pollution toward an exposure- and health-based understanding of its consequences.
+For the public AQLI interface, visit the [AQLI website](https://aqli.epic.uchicago.edu/).
 
 ---
 
-## Repository contents
+## Methodology
 
-- [`data/`](./data/) — country, first administrative level, and second administrative level data in narrow and wide formats.
-- [`data/README.md`](./data/README.md) — data sources, field definitions, codebook, units, and file-specific documentation.
-- [`aqli.png`](./aqli.png) — screenshot of the AQLI data tool.
-- [`aqli_dashboard.png`](./aqli_dashboard.png) — screenshot of the interactive AQLI dashboard.
-- [AQLI methodology](https://aqli.epic.uchicago.edu/about/methodology/) — research design, exposure data, population weighting, benchmarks, and life-expectancy calculations.
+The AQLI is grounded in peer-reviewed research estimating the causal effect of sustained particulate pollution on life expectancy.
 
-A typical repository structure is:
+Under the current methodology, a **permanent 10 µg/m³ reduction in PM<sub>2.5</sub> corresponds to approximately 0.98 years of additional life expectancy**, subject to the assumptions and scope of the underlying research.
 
-```text
-.
-├── README.md
-├── aqli.png
-├── aqli_dashboard.png
-└── data/
-    ├── README.md
-    └── ...
-```
-
----
-
-## Methodological foundation
-
-The AQLI is grounded in peer-reviewed research estimating the causal effect of sustained particulate pollution on life expectancy. The foundational studies use China’s Huai River heating policy as a quasi-experimental setting and identify a substantial long-term mortality effect from chronic particulate exposure.
-
-AQLI applies the resulting concentration–life-expectancy relationship to global PM<sub>2.5</sub> and population data. Under the current methodology, a **permanent 10 µg/m³ reduction in PM<sub>2.5</sub> corresponds to approximately 0.98 years of additional life expectancy**, subject to the assumptions and scope of the underlying research.
-
-Principal research references:
+Principal references include:
 
 1. Chen, Y., Ebenstein, A., Greenstone, M., & Li, H. (2013). *Evidence on the impact of sustained exposure to air pollution on life expectancy from China’s Huai River policy.* Proceedings of the National Academy of Sciences, 110(32), 12936–12941. https://doi.org/10.1073/pnas.1300018110
 2. Ebenstein, A., Fan, M., Greenstone, M., He, G., & Zhou, M. (2017). *New evidence on the impact of sustained exposure to air pollution on life expectancy from China’s Huai River Policy.* Proceedings of the National Academy of Sciences, 114(39), 10384–10389. https://doi.org/10.1073/pnas.1616784114
 3. van Donkelaar, A., et al. (2021). *Monthly global estimates of fine particulate matter and their uncertainty.* Environmental Science & Technology, 55(22), 15287–15300. https://doi.org/10.1021/acs.est.1c05309
 
-For the complete and authoritative treatment, use the [official AQLI methodology page](https://aqli.epic.uchicago.edu/about/methodology/).
+For the complete and authoritative treatment, see the [official AQLI methodology](https://aqli.epic.uchicago.edu/about/methodology/).
 
 ---
 
@@ -82,11 +87,11 @@ For the complete and authoritative treatment, use the [official AQLI methodology
 
 ### PM<sub>2.5</sub> concentration
 
-PM<sub>2.5</sub> represents particulate matter with an aerodynamic diameter of 2.5 micrometres or smaller. Concentrations are reported in **micrograms per cubic metre (µg/m³)**.
+PM<sub>2.5</sub> is particulate matter with an aerodynamic diameter of 2.5 micrometres or smaller. Concentrations are reported in **micrograms per cubic metre (µg/m³)**.
 
 ### Population-weighted exposure
 
-Population weighting gives greater influence to locations where more people live. The resulting estimate is intended to represent the concentration experienced by the average resident of a geographic unit rather than the unweighted average across its land area.
+Population weighting gives greater influence to locations where more people live. A population-weighted estimate is intended to represent the concentration experienced by the average resident of a geographic unit rather than the unweighted average across its land area.
 
 ### Potential gain in life expectancy
 
@@ -101,70 +106,65 @@ It should not be interpreted as:
 
 ---
 
-## Recommended analytical uses
+## Limitations and responsible use
 
-The repository can support:
+Users should review the README associated with the specific annual release before analysis.
 
-- longitudinal analysis of annual PM<sub>2.5</sub> exposure;
-- comparisons across countries and administrative units;
-- assessment of progress toward WHO or national standards;
-- analysis of spatial inequality in pollution exposure;
-- estimation and communication of potential life-expectancy gains;
-- production of policy briefs, academic figures, news graphics, and teaching materials;
-- reproducible extensions of AQLI-based research.
+Important considerations include:
 
-When comparing countries, users should distinguish between the common WHO guideline and country-specific national standards, which may differ in ambition and legal meaning.
+1. **Annual rather than real-time exposure:** AQLI data are designed for long-term exposure analysis and should not be used to infer hourly or daily conditions.
+2. **Satellite-derived estimates:** AQLI PM<sub>2.5</sub> estimates may differ from individual ground-monitor readings because the sources represent different spatial and temporal scales.
+3. **Geographic availability:** Administrative-level coverage varies across countries.
+4. **Population weighting:** Population-weighted averages can conceal exposure differences within a geographic unit.
+5. **Counterfactual interpretation:** Potential life-expectancy gains assume that lower pollution is sustained over time.
+6. **Cross-country standards:** National standards differ in both level and legal meaning.
+7. **Version consistency:** Reproducible analyses should record the annual release, data year, geographic level, benchmark, and any filtering or aggregation applied.
+8. **Historical revisions:** Earlier-year pollution estimates may change across annual releases as the underlying PM<sub>2.5</sub> model and calibration data are updated.
 
 ---
 
-## Limitations and responsible use
+## Reproducible use
 
-1. **Annual rather than real-time exposure:** The data are designed for long-term exposure analysis and should not be used to infer hourly or daily conditions.
-2. **Satellite-derived estimates:** AQLI PM<sub>2.5</sub> estimates may differ from individual ground-monitor readings because the two sources represent different spatial and temporal scales.
-3. **Population weighting:** Population-weighted averages can conceal exposure differences within a geographic unit; subnational analysis is preferable where available.
-4. **Counterfactual interpretation:** Potential life-expectancy gains assume that lower pollution is sustained over time.
-5. **Cross-country standards:** National standards vary, so comparisons relative to national standards should be interpreted with care.
-6. **Version consistency:** Analyses should record the data release, year, geographic level, benchmark, and any filtering or aggregation applied.
+When using AQLI data in research, reporting, or visualization, record:
+
+- the annual release used;
+- the data year;
+- the geographic level;
+- the pollution benchmark;
+- any transformations, filtering, or aggregation applied; and
+- the date the data were accessed.
+
+For finalized analysis, use a completed annual release rather than the active 2026 work-in-progress directory.
+
+---
+
+## Citation
+
+Please cite the **Air Quality Life Index (AQLI), Energy Policy Institute at the University of Chicago**, and identify the annual data release used in your analysis.
+
+Suggested attribution:
+
+> Air Quality Life Index (AQLI), Energy Policy Institute at the University of Chicago.
+
+For methodology and research references, see the [official AQLI methodology](https://aqli.epic.uchicago.edu/about/methodology/).
+
+---
+
+## License
+
+This repository is currently distributed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license. See [`LICENSE`](./LICENSE) for the governing terms.
+
+Third-party materials remain subject to their respective licenses and terms of use.
 
 ---
 
 ## Quick links
 
-- [Data files](./data/)
-- [Data documentation and codebook](./data/README.md)
+- [2025 completed data release](./AQLI%20Annual%20Update%202025%20data/)
+- [2026 work-in-progress data](./AQLI%20Annual%20Update%202026%20data/)
+- [Archived data](./archive/)
 - [AQLI methodology](https://aqli.epic.uchicago.edu/about/methodology/)
 - [AQLI website](https://aqli.epic.uchicago.edu/)
-
----
-
-## Reuse and citation
-
-You may reuse the data in research, reports, visualizations, and news coverage subject to the repository’s license and attribution requirements. Please cite the AQLI and link to the original project.
-
-### Suggested academic citation
-
-```bibtex
-@misc{aqli_2024,
-  title     = {How much longer would you live if you breathed clean air?},
-  year      = {2024},
-  month     = sep,
-  publisher = {Energy Policy Institute at the University of Chicago},
-  journal   = {Air Quality Life Index},
-  url       = {https://aqli.epic.uchicago.edu/}
-}
-```
-
-For a reproducible analysis, also report:
-
-- the repository or release version;
-- the data year;
-- the geographic level;
-- the pollution benchmark used; and
-- the date the data were accessed.
-
-### Suggested media attribution
-
-> Air Quality Life Index (AQLI), Energy Policy Institute at the University of Chicago.
 
 ---
 
