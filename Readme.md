@@ -4,9 +4,9 @@
 
 The **Air Quality Life Index (AQLI)**, developed by the **Energy Policy Institute at the University of Chicago (EPIC)**, translates long-term exposure to fine particulate matter (PM<sub>2.5</sub>) into its effect on life expectancy.
 
-AQLI combines peer-reviewed evidence on sustained particulate exposure and mortality with satellite-derived PM<sub>2.5</sub> estimates and population data. Results can be evaluated relative to the **World Health Organization annual PM<sub>2.5</sub> guideline of 5 µg/m³**, a country-specific national standard, or another selected benchmark.
+AQLI combines peer-reviewed evidence on sustained particulate exposure and mortality with satellite-derived PM<sub>2.5</sub> estimates and population data. Results can be evaluated relative to the **World Health Organization annual PM<sub>2.5</sub> guideline of 5 µg/m³**, a country-specific national standard, or any other selected benchmark.
 
-> **Important:** AQLI estimates describe the long-term consequences of annual PM<sub>2.5</sub> exposure. They are not real-time AQI readings, short-term exposure forecasts, or substitutes for regulatory ground-monitoring networks.
+> **Important:** AQLI estimates describe the long-term consequences of annual PM<sub>2.5</sub> exposure on life expectancy. They are not real-time AQI readings, short-term exposure forecasts, or substitutes for regulatory ground-monitoring networks.
 
 ---
 
@@ -18,7 +18,7 @@ AQLI combines peer-reviewed evidence on sustained particulate exposure and morta
 | [`AQLI Annual Update 2026 data/`](./AQLI%20Annual%20Update%202026%20data/) | **Work in progress** | Data under active development for the next annual update |
 | [`archive/`](./archive/) | Historical | Earlier archived data |
 
-> **2026 data are under active development and should not be treated as a finalized AQLI release until publication is complete.**
+> **2026 data are under active development and should not be treated as a finalized AQLI release until report is published.**
 
 Each annual-release directory contains its own README with release-specific field definitions, units, source information, and limitations.
 
